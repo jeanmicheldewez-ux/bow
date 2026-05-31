@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "name": "BOW v0.1 Demo Graph",
+  "nodes": [
+    {
+      "id": "transport",
+      "moduleId": "bow.transports.midi-like-simulator",
+      "params": {
+        "channelCount": 8,
+        "tempo": 0.75,
+        "humanize": 0.08
+      }
+    },
+    {
+      "id": "model",
+      "moduleId": "bow.models.mock-dance-16",
+      "params": {
+        "energy": 0.72,
+        "symmetry": 0.45
+      }
+    },
+    {
+      "id": "mapper",
+      "moduleId": "bow.mappers.creative-mapper",
+      "params": {
+        "outputSize": 24,
+        "strategy": "repeat",
+        "smoothing": 0.15,
+        "fillValue": 0.5
+      }
+    },
+    {
+      "id": "visualizer",
+      "moduleId": "bow.visualizers.vector-field-24",
+      "params": {
+        "expectedValues": 24,
+        "lineCount": 180,
+        "glow": 0.7
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "transport",
+      "to": "model",
+      "outlet": "controls",
+      "inlet": "controls"
+    },
+    {
+      "from": "model",
+      "to": "mapper",
+      "outlet": "motion",
+      "inlet": "input"
+    },
+    {
+      "from": "mapper",
+      "to": "visualizer",
+      "outlet": "output",
+      "inlet": "field"
+    }
+  ]
+}

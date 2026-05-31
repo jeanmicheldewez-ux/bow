@@ -1,0 +1,10 @@
+{
+  "name": "bow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python -m http.server 5173",
+    "dev": "python -m http.server 5173"
+  }
+}
