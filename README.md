@@ -6,6 +6,10 @@ BOW is a browser-based modular creative runtime for routing normalized control d
 
 This repository does not include production code from those projects. It defines a public, portable foundation they can integrate with later.
 
+<img width="740" height="403" alt="sh-bow-1" src="https://github.com/user-attachments/assets/4dcf4937-eac6-4700-a638-4a34b236b18d" />
+
+
+
 ## v0.1 Demo
 
 The demo contains:
